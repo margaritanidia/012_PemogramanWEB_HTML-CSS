@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Margarita Nidia Adiningrum</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #faf7f5;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      display:flex; 
+      justify-content: space-between; 
+      align-items: center;
+      padding:1rem 5%;
+      background: linear-gradient(to right, #eecfcf, #d8b4a0);
+      color:#fff; 
+      position: sticky;
+      top:0;
+      z-index: 1000;
+    }
+    .navbar .nav-menu {
+      list-style:none;
+      display:flex;
+      gap:20px;
+      margin:0;
+      padding:0;
+    }
+    .navbar .nav-menu li a {
+      text-decoration:none;
+      color:#fff;
+      font-weight:500;
+    }
+    .navbar .nav-menu li a.active {
+      border-bottom: 2px solid #fff;
+    }
+
+    /* Hero */
+    .hero {
+      text-align:center;
+      padding:80px 20px;
+      background: linear-gradient(135deg, #eecfcf, #d8b4a0);
+      color:#fff;
+    }
+    .hero h1 {
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
+    .hero p {
+      font-size:1.15rem;
+      line-height:1.6;
+      max-width:700px;
+      margin: 0 auto;
+    }
+
+    /* Projects */
+    .projects {
+      padding:60px 20px;
+      text-align:center;
+    }
+    .projects h2 {
+      margin-bottom:40px;
+      font-size:2rem;
+    }
+    .project-container {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:20px;
+      justify-items:center;
+    }
+    .project-card {
+      background:#fff;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+      padding:20px;
+      max-width:350px;
+      text-align:center;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width:100%;
+      border-radius:10px;
+      margin-bottom:15px;
+    }
+    .project-card h3 {
+      margin-bottom:10px;
+      color:#9a6b4f;
+    }
+    .project-card p {
+      font-size:0.95rem;
+      line-height:1.4;
+      margin-bottom:15px;
+    }
+    .project-card .btn {
+      text-decoration:none;
+      padding:10px 20px;
+      background: linear-gradient(to right, #eecfcf, #d8b4a0);
+      color:#fff;
+      border-radius:8px;
+      display:inline-block;
+      font-weight:500;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#d8b4a0;
+      color:#fff;
+      margin-top:40px;
+    }
+
+    /* Responsif */
+    @media (max-width: 1024px){
+      .project-container { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px){
+      .hero h1 { font-size:2rem; }
+      .hero p { font-size:1rem; }
+      .project-container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Margarita Nidia Adiningrum</h2>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px;">
+    <img src="image_margarita.jpeg"Foto Margarita" style="width:250px; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+    <div class="hero-text" style="max-width:600px; text-align:center;">
+    <h1>Selamat Datang di Portofolio Saya</h1>
+    <p>Halo 👋 Saya <strong>Margarita Nidia Adiningrum</strong>, seorang mahasiswa <strong>Manajemen Informatika</strong> 
+      yang memiliki ketertarikan besar pada dunia teknologi, desain,basis data serta pengembangan digital. 
+      Selain belajar, saya juga senang travelling dan mencari pengalaman baru yang bisa memperluas cara pandang.  
+      Bagi saya, teknologi bukan hanya alat, tapi juga jembatan untuk menciptakan manfaat nyata bagi banyak orang.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2>📂 Proyek Informatika Saya</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Website Akademik">
+        <h3>Sistem Informasi Akademik</h3>
+        <p>Aplikasi berbasis web untuk pengelolaan data mahasiswa, dosen, dan mata kuliah secara terpusat menggunakan HTML, CSS, dan PHP.</p>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+      <div class="project-card">
+        <img src="https://plus.unsplash.com/premium_photo-1663050681752-4c95effcca58?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Aplikasi Absensi">
+        <h3>Aplikasi Absensi Online</h3>
+        <p>Proyek web sederhana yang memungkinkan absensi berbasis QR Code dengan integrasi database MySQL dan autentikasi pengguna.</p>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400" alt="Dashboard Data">
+        <h3>Dashboard Data Penjualan</h3>
+        <p>Visualisasi data interaktif menggunakan HTML, CSS, dan Chart.js untuk memudahkan analisis tren penjualan perusahaan.</p>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024A Margarita Nidia Adiningum All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

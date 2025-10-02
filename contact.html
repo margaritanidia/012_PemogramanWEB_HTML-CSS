@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Margarita Nidia Adiningrum</title> 
+<style>
+  body { font-family:'Segoe UI',sans-serif; margin:0; padding:0; background:#fdf2f8; color:#333; }
+
+  /* Navbar */
+  .navbar { display:flex; justify-content: space-between; align-items: center; padding:1rem 5%; background:linear-gradient(to right,#fbcfe8,#f9a8d4); color:#fff; position:sticky; top:0; z-index:1000;}
+  .nav-menu { display:flex; gap:20px; list-style:none; margin:0; padding:0;}
+  .nav-link { color:#fff; text-decoration:none; font-weight:500; }
+  .nav-link.active { border-bottom:2px solid #fff;}
+
+  /* Hero */
+  .contact-hero { text-align:center; padding:80px 20px; background:linear-gradient(135deg,#f9a8d4,#f472b6); color:#fff;}
+  .contact-hero h1 { font-size:2.5rem; margin-bottom:10px;}
+  .contact-hero p { font-size:1.2rem;}
+
+  /* Contact Section */
+  .contact-section { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; padding:60px 5%; }
+
+  /* Form Card */
+  .contact-card { background:#fff; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); padding:30px; max-width:450px; width:100%; }
+  .contact-card h2 { color:#db2777; margin-top:0; margin-bottom:20px; text-align:center; }
+
+  /* Form */
+  .contact-card form input,
+  .contact-card form textarea { width:100%; padding:12px; margin-bottom:15px; border:1px solid #e5e7eb; border-radius:8px; font-size:1rem; resize:vertical;}
+  .contact-card form button { width:100%; padding:12px; background:#f472b6; color:#fff; border:none; border-radius:8px; font-size:1rem; cursor:pointer; transition: background 0.3s;}
+  .contact-card form button:hover { background:#ec4899;}
+
+  /* Info Kontak Kotak */
+  .contact-info-cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px; justify-items:center; width:100%; }
+  .info-card-box { background:#fff; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); padding:20px; width:100%; max-width:250px; text-align:center; transition: transform 0.3s; }
+  .info-card-box:hover { transform: translateY(-5px); }
+  .info-card-box span { font-size:2rem; display:block; margin-bottom:10px; }
+  .info-card-box a { color:#f472b6; text-decoration:none; }
+  .info-card-box a:hover { text-decoration:underline; }
+
+  /* Footer */
+  .footer { text-align:center; padding:20px; background:#f9a8d4; color:#fff; }
+
+  /* Responsif */
+  @media(max-width:768px) { .contact-section { flex-direction:column; align-items:center; } }
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><h2>Margarita Nidia Adiningrum</h2></div>
+    <ul class="nav-menu">
+      <li><a href="portofolio.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <h1>Kontak Saya</h1>
+    <p>Silakan kirim pesan dan kesan tentang saya melalui form atau hubungi saya lewat info kontak di bawah ini</p> 
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+
+    <!-- Formulir Aktif -->
+    <div class="contact-card">
+      <h2>Formulir Kontak</h2>
+      <form action="send.php" method="POST">
+        <input type="text" name="name" placeholder="Nama Lengkap" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Subjek" required>
+        <textarea name="message" rows="6" placeholder="Pesan" required></textarea>
+        <button type="submit">Kirim Pesan atau Kesan</button> 
+      </form>
+    </div>
+
+    <!-- Info Kontak Kotak -->
+    <div class="contact-card">
+      <h2>Info Kontak</h2>
+      <div class="contact-info-cards">
+        <div class="info-card-box">
+          <span>📧</span>
+          <p>Email</p>
+          <a href="mailto:margaritanidiaaa@gmail.com">margaritanidiaaa@gmail.com</a> 
+        </div>
+        <div class="info-card-box">
+          <span>📱</span>
+          <p>WhatsApp</p>
+          <a href="https://wa.me/6287709864776" target="_blank">+62 877 0986 4776</a> 
+        </div>
+        <div class="info-card-box">
+          <span>📸</span>
+          <p>Instagram</p>
+          <a href="https://www.instagram.com/margaritaadn?igsh=MXM4cjIwY3dma3pxMQ==" target="_blank">@margarita</a> 
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">&copy; 2024 Margarita Nidia Adiningrum</footer> 
+
+</body>
+</html>

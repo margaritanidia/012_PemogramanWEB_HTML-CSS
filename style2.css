@@ -1,0 +1,257 @@
+/* ========== Global Style ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom, #fef2f8, #fce7f3);
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  color: #831843;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: linear-gradient(135deg, #f9a8d4, #ec4899);
+  color: #ffffff;
+  padding: 100px 10%;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* 🌟 Tombol utama */
+.hero .btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #be185d;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hero .btn:hover {
+  background: #be185d;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ========== Projects Section ========== */
+.projects {
+  padding: 80px 5%;
+  background: #fef2f8;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #be185d;
+  position: relative;
+}
+
+.projects h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f472b6;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 20px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background: #f472b6;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.project-card p {
+  margin: 20px;
+  color: #000000;
+}
+
+/* 🌟 Tombol di kartu proyek */
+.project-card .btn {
+  display: inline-block;
+  margin: 0 20px 30px;
+  padding: 10px 25px;
+  background: #ffffff;
+  color: #be185d;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.project-card .btn:hover {
+  background: #be185d;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-top: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #fbcfe8;
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ========== Animation ========== */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

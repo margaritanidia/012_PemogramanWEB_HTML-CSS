@@ -1,0 +1,166 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f9e0d9 0%, #f6d6c3 50%, #fdf6f0 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    color: #4a3f35;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #6a5846;
+    border-bottom: 2px solid #d9b99b;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+/* Container */
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #ffffffee;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 35px;
+    backdrop-filter: blur(6px);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Foto Profil */
+.profile-photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px;
+    border: 5px solid #e6d5c3;
+    box-shadow: 0 5px 15px rgba(217, 185, 155, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(217, 185, 155, 0.6);
+}
+
+/* Biodata */
+.biodata {
+    background: #faf5f0;
+    padding: 18px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid #d9b99b;
+}
+
+.biodata-item {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.biodata-label {
+    font-weight: bold;
+    color: #3a2f28;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.biodata-value {
+    color: #5a4d43;
+    flex: 1;
+}
+
+/* Sosial */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 8px 12px;
+    padding: 10px 22px;
+    background: linear-gradient(45deg, #e6d5c3, #f9e0d9);
+    color: #3a2f28;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 5px 12px rgba(217, 185, 155, 0.3);
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(217, 185, 155, 0.5);
+    background: linear-gradient(45deg, #f9e0d9, #e6d5c3);
+}
+
+/* Footer */
+#footer-note {
+    text-align: center;
+    margin-top: 20px;
+    color: #6d5c4f;
+    font-style: italic;
+    padding-top: 15px;
+    border-top: 2px solid #e6d5c3;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .profile-photo {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .biodata-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .biodata-label {
+        width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .social-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
