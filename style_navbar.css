@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.logo, nav a {
+  color: white;
+}
